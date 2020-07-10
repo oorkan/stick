@@ -1,4 +1,4 @@
-(dom => {
+((dom, bom) => {
     let container = dom.createElement('div'),
     moveable = dom.createElement('div'),
     x0 = 0, y0 = 0;
@@ -17,10 +17,10 @@
     moveable.addEventListener('mousedown', (e) => {
         x0 = e.pageX - e.target.offsetLeft;
         y0 = e.pageY - e.target.offsetTop;
-        window.addEventListener('mousemove', move );
+        bom.addEventListener('mousemove', move );
     });
 
-    window.addEventListener('mouseup', (e) => {
-        window.removeEventListener('mousemove', move);
+    bom.addEventListener('mouseup', (e) => {
+        bom.removeEventListener('mousemove', move);
     });
-})(document);
+})(document, window);
