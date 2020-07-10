@@ -1,0 +1,19 @@
+html,body { margin: 0; padding: 0; }
+
+:root {
+    --red: crimson;
+    --lightred: #b31a1a;
+}
+
+.full-x { width: 100%; }
+.full-y { height: 100%; }
+.fixed { position: fixed; }
+.absolute { position: absolute; }
+
+.container {}
+
+.moveable {
+    width: 25%;
+    height: 25%;
+    background: linear-gradient(to right top, var(--red), var(--lightred));    
+}
